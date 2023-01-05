@@ -1,0 +1,17 @@
+{
+  "name": "parse-pgn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mliebelt/pgn-parser": "^1.4.5",
+    "chess.js": "1.0.0-alpha.0",
+    "firebase-admin": "^11.4.1"
+  }
+}
