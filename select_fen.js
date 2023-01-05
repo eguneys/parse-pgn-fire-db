@@ -103,6 +103,10 @@ function set_length() {
   return _set_lengths[current_set()]
 }
 
+const gen_id = (id, nb_moves) => {
+  return `g-${id}-${nb_moves}`
+}
+
 let total = 0
 function parse_write(line) {
   total += line.length
@@ -112,7 +116,7 @@ function parse_write(line) {
 
 
   if (check_set(id, eval, nb_moves)) {
-    queue.push([current_set(), _].join(','))
+    queue.push([current_set(), gen_id(id, nb_moves), _].join(','))
     if (queue.length > set_length()) {
       flush()
       _current_set++
