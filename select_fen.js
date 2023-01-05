@@ -15,7 +15,7 @@ function flush() {
   console.log('progress %', Math.floor((total / size * 100) * 100) / 100)
 
 
-  writeStream.write(queue.join('\n'))
+  writeStream.write(queue.join('\n')+'\n')
 
   queue = []
 }
